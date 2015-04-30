@@ -88,7 +88,7 @@ public class ApplicationFrame extends javax.swing.JFrame implements
      * Creates an application frame with the settings given by <code>app</code>.
      */
     public ApplicationFrame(Application app) {
-        super(Language.getString("com/geolud/atomica"));
+        super(Language.getString("atomica"));
 
         this.app = app;
 

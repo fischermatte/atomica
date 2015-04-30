@@ -55,9 +55,7 @@ public class Language {
 
         try {
             // try to get bundle of current language
-            ResourceBundle messages = ResourceBundle.getBundle(
-                    "com.geolud.atomica.ui.util.language.ResourceBundle",
-                    getInstance().currentLocale);
+            ResourceBundle messages = ResourceBundle.getBundle("ResourceBundle", getInstance().currentLocale);
             // bundle found, lookup text
             value = messages.getString(key);
         } catch (RuntimeException e) {
@@ -121,8 +119,7 @@ public class Language {
      */
     public void switchLanguage(String lang) {
         if (!supportedLanguages.contains(lang)) {
-            Logging.getLogger().log(Level.SEVERE,
-                    lang + " is a unsupported language.");
+            Logging.getLogger().log(Level.SEVERE, lang + " is a unsupported language.");
         } else {
             currentLocale = new Locale(lang);
         }
