@@ -356,7 +356,7 @@ public class EditorPanel extends AtomicaPanel implements Observer {
             colorsComboBox = new AtomicaComboBox();
 
             for (int i = Level.MIN_NUMBEROFCOLORS; i <= Level.MAX_NUMBEROFCOLORS; i++) {
-                Integer n = new Integer(i);
+                Integer n = i;
                 colorsComboBox.addItem(n);
                 if (n.equals(editor.getCurrentNumberOfColors())) {
 

@@ -23,8 +23,6 @@ public class Help {
         EN
     }
 
-    ;
-
     /**
      * The url to the German help file.
      */

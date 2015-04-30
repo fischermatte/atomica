@@ -113,10 +113,8 @@ public class Molecule {
      * @return true if the atom is part of the molecule
      */
     public boolean contains(AtomToken atom) {
-        if (!atoms.contains(atom))
-            return false;
+        return atoms.contains(atom);
 
-        return true;
     }
 
     /**
@@ -204,14 +202,8 @@ public class Molecule {
     public boolean isValid() {
         int rows = getRows();
         int cols = getCols();
+        return atoms.size() >= 4 && atoms.size() == (rows * cols);
 
-        if (atoms.size() < 4)
-            return false;
-
-        if (atoms.size() != (rows * cols))
-            return false;
-
-        return true;
     }
 
     /**

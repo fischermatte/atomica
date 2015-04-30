@@ -180,9 +180,7 @@ public class PathFinder {
         float dx = to.getCol() - from.getCol();
         float dy = to.getRow() - from.getRow();
 
-        float result = (float) (Math.sqrt((dx * dx) + (dy * dy)));
-
-        return result;
+        return (float) (Math.sqrt((dx * dx) + (dy * dy)));
     }
 
     /**

@@ -72,10 +72,8 @@ public class Field implements Serializable {
      */
     public boolean isBlocked() {
         Token token = getToken();
-        if (token == null || token.getClass() == IndicatorToken.class)
-            return false;
+        return !(token == null || token.getClass() == IndicatorToken.class);
 
-        return true;
     }
 
     /**

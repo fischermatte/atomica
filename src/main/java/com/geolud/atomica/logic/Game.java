@@ -108,10 +108,8 @@ public class Game extends Observable {
      */
     private boolean allAtomsRemoved() {
         ArrayList<AtomToken> atoms = gameSituation.getAtoms();
-        if (atoms == null || atoms.size() == 0)
-            return true;
+        return atoms == null || atoms.size() == 0;
 
-        return false;
     }
 
     /**
@@ -291,9 +289,7 @@ public class Game extends Observable {
 
         int n = random.nextInt(size);
 
-        Field field = emptyFields.get(n);
-
-        return field;
+        return emptyFields.get(n);
     }
 
     /**

@@ -87,15 +87,8 @@ public class AtomicaNumberSpinner extends JSpinner {
             return false;
         }
 
-        if (n > max) {
-            return false;
-        }
+        return n <= max && n >= min;
 
-        if (n < min) {
-            return false;
-        }
-
-        return true;
     }
 
     /**
